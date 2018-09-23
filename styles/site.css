@@ -1,3 +1,4 @@
+@import url(../site-backup.css);
 @import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700|Open+Sans:400,600,700|Roboto:100,300,400,500,700,900");
 @page {
   margin: 0.5in;
@@ -19,7 +20,8 @@
   @top-left {}  @bottom-left {} }
 
 html {
-  font-size: 14px; }
+  font-size: 18px;
+  line-height: 1.4em; }
 
 body {
   margin: 0;
@@ -162,7 +164,7 @@ body.content-preview {
   border: none; }
 
 body, p, li, td, table, tr, .bodytext, .stepfield {
-  font-size: 14px;
+  font-size: 1rem;
   /*line-height: 1.1;*/
   color: #000;
   font-weight: normal; }
@@ -257,7 +259,7 @@ h3 {
   h3:before {
     content: "";
     display: inline-block;
-    width: 3em;
+    width: 2em;
     height: 0;
     vertical-align: middle;
     line-height: .5em;
@@ -331,10 +333,48 @@ td.infocell {
 /* block quote */
 blockquote {
   font-style: italic;
-  border-left-width: 1px;
-  border-left-style: solid;
-  padding: 0 20px;
-  margin: 10px 20px; }
+  background: #02b3da;
+  background: #333;
+  text-align: center;
+  padding: 2em 3em;
+  margin: 1em;
+  font-size: 1.3em;
+  line-height: 1.5em;
+  position: relative;
+  overflow: hidden; }
+  blockquote:before {
+    content: '';
+    background: #02b3da;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    left: -100%;
+    height: 25%;
+    bottom: 0;
+    transform: rotate(-45deg);
+    z-index: 2;
+    box-shadow: inset 0 0 20px 8px rgba(255, 255, 255, 0.1), 0 0 8px rgba(0, 0, 0, 0.2); }
+  blockquote:after {
+    content: '';
+    background: #028aa7;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    left: -100%;
+    height: 30%;
+    bottom: 0;
+    transform: rotate(-45deg);
+    z-index: 1; }
+  blockquote p {
+    font-size: 1em;
+    color: white;
+    position: relative;
+    z-index: 2; }
+    blockquote p:last-child {
+      margin-top: 0;
+      font-size: .8em;
+      text-align: right;
+      margin-right: 6em; }
 
 blockquote em {
   font-style: normal; }
@@ -737,6 +777,7 @@ pre {
     display: inline-block;
     font-weight: 600; }
 
+/* blockquote */
 /* tables */
 .table-wrap {
   width: 100%;
@@ -771,6 +812,16 @@ table, table.confluenceTable {
   table.confluenceTable thead th {
     border-color: #32383e;
     padding: .75rem; }
+    table th .handle, table th .indentation,
+    table td .handle,
+    table td .indentation,
+    table thead th .handle,
+    table thead th .indentation, table.confluenceTable th .handle, table.confluenceTable th .indentation,
+    table.confluenceTable td .handle,
+    table.confluenceTable td .indentation,
+    table.confluenceTable thead th .handle,
+    table.confluenceTable thead th .indentation {
+      display: none; }
   table.table-bordered, table.confluenceTable.table-bordered {
     border: 0; }
   table tbody tr:nth-of-type(odd), table.confluenceTable tbody tr:nth-of-type(odd) {
