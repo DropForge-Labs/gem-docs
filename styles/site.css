@@ -47,6 +47,9 @@ div.titlepage, div.toc {
 img {
   page-break-inside: avoid;
   -fs-fit-images-to-width: 6in; }
+  img.image-center {
+    display: block;
+    margin: 3em auto; }
 
 table.lozenge {
   page-break-inside: avoid; }
@@ -257,7 +260,7 @@ h2 {
 
 h3 {
   font-size: 24px;
-  margin: 1.2em 0 .5em 0;
+  margin: 2.5em 0 .5em 0;
   text-transform: capitalize;
   position: relative;
   font-size: 26px; }
@@ -338,7 +341,6 @@ td.infocell {
 /* block quote */
 blockquote {
   font-style: italic;
-  background: #02b3da;
   background: #333;
   text-align: center;
   padding: 2em 3em;
@@ -346,29 +348,16 @@ blockquote {
   font-size: 1.3em;
   line-height: 1.5em;
   position: relative;
-  overflow: hidden; }
+  overflow: visible; }
   blockquote:before {
     content: '';
-    background: #02b3da;
+    background: #333;
     position: absolute;
     top: 0;
-    right: 0px;
-    left: -100%;
-    height: 25%;
+    right: -1000%;
+    left: -1000%;
+    height: 100%;
     bottom: 0;
-    transform: rotate(-45deg);
-    z-index: 2;
-    box-shadow: inset 0 0 20px 8px rgba(255, 255, 255, 0.1), 0 0 8px rgba(0, 0, 0, 0.2); }
-  blockquote:after {
-    content: '';
-    background: #028aa7;
-    position: absolute;
-    top: 0px;
-    right: 0;
-    left: -100%;
-    height: 30%;
-    bottom: 0;
-    transform: rotate(-45deg);
     z-index: 1; }
   blockquote p {
     font-size: 1em;
@@ -456,6 +445,7 @@ div.toc-macro {
       background: white;
       float: left;
       padding: 0 .5em;
+      font-weight: 400;
       position: relative;
       z-index: 2; }
 
@@ -812,6 +802,18 @@ table, table.confluenceTable {
     text-transform: capitalize;
     text-align: left;
     background: white; }
+  table th ul li,
+  table td ul li,
+  table thead th ul li, table.confluenceTable th ul li,
+  table.confluenceTable td ul li,
+  table.confluenceTable thead th ul li {
+    list-style: disc; }
+    table th ul li:before,
+    table td ul li:before,
+    table thead th ul li:before, table.confluenceTable th ul li:before,
+    table.confluenceTable td ul li:before,
+    table.confluenceTable thead th ul li:before {
+      display: none; }
   table th .handle, table th .indentation,
   table td .handle,
   table td .indentation,
@@ -888,3 +890,10 @@ table.attachments a {
 /* expand user macro */
 .toggle-answer {
   display: block !important; }
+
+.columnLayout {
+  display: flex;
+  flow-flow: row wrap;
+  justify-content: space-evenly; }
+  .columnLayout.single .cell {
+    width: 100%; }
