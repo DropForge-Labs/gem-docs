@@ -340,7 +340,7 @@ h1,h2,h3,h4,h5,h6,h7,h8,h9
 
 @mixin h-block {
   font-size: 24px;
-  margin: 21px 0 4px 1.25em;
+  margin: 2em 0 2em 3.5em;
   text-transform: uppercase;
   position: relative;
   &:before {
@@ -354,7 +354,7 @@ h1,h2,h3,h4,h5,h6,h7,h8,h9
     bottom: .5em;
   }
   + p, + p + p {
-    margin-left: 2em;
+    margin-left: 3.5em;
   }
 }
 @mixin h-long-bar {
@@ -514,7 +514,8 @@ td.infocell
 /* block quote */
 blockquote {
   font-style: italic;
-  background: #333;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+  background-blend-mode: multiply,multiply;
   text-align: center;
   padding: 2em 3em;
   margin: 1em;
@@ -524,7 +525,7 @@ blockquote {
   overflow: visible;
   &:before {
     content: '';
-    background: #333;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     position: absolute;
     top: 0;
     right: -1000%;
@@ -1209,13 +1210,76 @@ table.attachments a
    display: flex;
    flow-flow: row wrap;
    justify-content: space-evenly;
+   img {
+     max-width: 100%;
+     height: auto;
+   }
    &.single {
      .cell {
        width: 100%;
      }
    }
-   &.two-left-sidebar {
-      .aside {
+   &.two-equal {
+      .cell {
+        width: 50%;
+        padding: 0 1rem;
+      }
+      h4 {
+        margin-left: 0;
+        & + p, & + p + p  {
+          margin-left: 0;
+        }
+      }
+      table, table.confluenceTable {
+        width: 100%!important;
+        margin: 1em 0em;
+      }
+      blockquote {
+        font-size: 1.1rem;
+        background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+        margin: 2em 0 0 0;
+        p:last-child {
+          text-align: center;
+          margin-right: 0;
+        }
+        a {
+          color: $dropforge-blue;
+        }
+        &:before {
+          display: none;
+        }
       }
    }
+   &.two-left-sidebar, &.two-right-sidebar {
+      .cell {
+        flex-grow: 1;
+        padding: 0 1rem;
+      }
+      .aside {
+        max-width: 40%;
+        min-width: 30%;
+        flex-shrink: 1;
+        table, table.confluenceTable {
+          width: auto!important;
+          margin: 1em 0em;
+        }
+      }
+      table, table.confluenceTable {
+        width: auto!important;
+        margin: 1em 0em;
+        td, td.confluenceTD {
+          vertical-align: top;
+        }
+      }
+      blockquote {
+        font-size: 1.2rem;
+        background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+        background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+        margin: 0;
+        &:before {
+          display: none;
+        }
+      }
+   }
+
  }

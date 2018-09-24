@@ -276,7 +276,7 @@ h3 {
 
 h4 {
   font-size: 24px;
-  margin: 21px 0 4px 1.25em;
+  margin: 2em 0 2em 3.5em;
   text-transform: uppercase;
   position: relative;
   font-size: 18px; }
@@ -290,7 +290,7 @@ h4 {
     left: -.6em;
     bottom: .5em; }
   h4 + p, h4 + p + p {
-    margin-left: 2em; }
+    margin-left: 3.5em; }
 
 h5 {
   font-size: 14px;
@@ -341,7 +341,8 @@ td.infocell {
 /* block quote */
 blockquote {
   font-style: italic;
-  background: #333;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.4) 120%) #989898;
+  background-blend-mode: multiply,multiply;
   text-align: center;
   padding: 2em 3em;
   margin: 1em;
@@ -351,7 +352,7 @@ blockquote {
   overflow: visible; }
   blockquote:before {
     content: '';
-    background: #333;
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     position: absolute;
     top: 0;
     right: -1000%;
@@ -895,5 +896,51 @@ table.attachments a {
   display: flex;
   flow-flow: row wrap;
   justify-content: space-evenly; }
+  .columnLayout img {
+    max-width: 100%;
+    height: auto; }
   .columnLayout.single .cell {
     width: 100%; }
+  .columnLayout.two-equal .cell {
+    width: 50%;
+    padding: 0 1rem; }
+  .columnLayout.two-equal h4 {
+    margin-left: 0; }
+    .columnLayout.two-equal h4 + p, .columnLayout.two-equal h4 + p + p {
+      margin-left: 0; }
+  .columnLayout.two-equal table, .columnLayout.two-equal table.confluenceTable {
+    width: 100% !important;
+    margin: 1em 0em; }
+  .columnLayout.two-equal blockquote {
+    font-size: 1.1rem;
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+    margin: 2em 0 0 0; }
+    .columnLayout.two-equal blockquote p:last-child {
+      text-align: center;
+      margin-right: 0; }
+    .columnLayout.two-equal blockquote a {
+      color: #02b3da; }
+    .columnLayout.two-equal blockquote:before {
+      display: none; }
+  .columnLayout.two-left-sidebar .cell, .columnLayout.two-right-sidebar .cell {
+    flex-grow: 1;
+    padding: 0 1rem; }
+  .columnLayout.two-left-sidebar .aside, .columnLayout.two-right-sidebar .aside {
+    max-width: 40%;
+    min-width: 30%;
+    flex-shrink: 1; }
+    .columnLayout.two-left-sidebar .aside table, .columnLayout.two-left-sidebar .aside table.confluenceTable, .columnLayout.two-right-sidebar .aside table, .columnLayout.two-right-sidebar .aside table.confluenceTable {
+      width: auto !important;
+      margin: 1em 0em; }
+  .columnLayout.two-left-sidebar table, .columnLayout.two-left-sidebar table.confluenceTable, .columnLayout.two-right-sidebar table, .columnLayout.two-right-sidebar table.confluenceTable {
+    width: auto !important;
+    margin: 1em 0em; }
+    .columnLayout.two-left-sidebar table td, .columnLayout.two-left-sidebar table td.confluenceTD, .columnLayout.two-left-sidebar table.confluenceTable td, .columnLayout.two-left-sidebar table.confluenceTable td.confluenceTD, .columnLayout.two-right-sidebar table td, .columnLayout.two-right-sidebar table td.confluenceTD, .columnLayout.two-right-sidebar table.confluenceTable td, .columnLayout.two-right-sidebar table.confluenceTable td.confluenceTD {
+      vertical-align: top; }
+  .columnLayout.two-left-sidebar blockquote, .columnLayout.two-right-sidebar blockquote {
+    font-size: 1.2rem;
+    background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+    margin: 0; }
+    .columnLayout.two-left-sidebar blockquote:before, .columnLayout.two-right-sidebar blockquote:before {
+      display: none; }
