@@ -39,14 +39,56 @@
     
         
         
-            Created by <span class='author'> Andrew Rosborough</span>, last modified on Sep 25, 2018
+            Created by <span class='author'> Andrew Rosborough</span>, last modified by <span class='editor'> Andrew Santiago</span> on Sep 25, 2018
                         </div>
                     <div id="main-content" class="wiki-content group">
                     <div class="contentLayout2">
 <div class="columnLayout single" data-layout="single">
 <div class="cell normal" data-type="normal">
 <div class="innerCell">
-<h2 id="AgileProjectPlan-AgileProcess">Agile Process</h2><p>Our Kanban based agile process entails collecting tasks and organizing work estimates to be performed in a workflow which enables a single developer to stay organized and focused on their deliverables.  As a developer becomes available to work on a new area of the project, they choose a story point or task from a queue to work on.  All of the tasks are organized on a Kanban board which shows columns for statuses of work such as<em> work in progress,</em> <em>needs review</em> and <em>done</em>.  The developer may only focus on a few issues through their completion before moving to a new task.  This crucial Kanban constraint is known as &quot;Limiting work in progress&quot; and helps to decrease developer ramp-up times and mitigate technical debt.  The Agile process is unique because while utilizing kanban, developers choose sets of features to work on in a manageable timeframe such as one week.  These are delivered incrementally as initial prototypes and then more refined versions with each iteration of development.</p><h2 id="AgileProjectPlan-IterationsandSprints">Iterations and Sprints</h2><p>A set of obtainable story points will be selected for development at the start of a sprint.  The sprint will consist of processing each subset of the backlog until all tasks are done.  An iteration is considered a revisitation of the features in an additional sprint where bugs and other tasks are identified to refactor an earlier sprint's functionality.</p><h2 id="AgileProjectPlan-Releasecycle">Release cycle</h2><p>Initially, several sprints are performed and at a point deemed acceptable by the development team, an early beta is staged to a shared environment.  This beta version of the software is updated on a continuous basis as the product is developed.  Releases will be made on a regular basis to a Development environment or Standalone Feature Multi-dev environment and be merged in the manner of going from Feature to Dev to Test to Live.  Before the Launch Date, the furthest this workflow will be utilized will be to deploy to the Test environment for review of stable releases.</p><h2 id="AgileProjectPlan-OrganizingEpics,UsersStories,andTasksandBugs">Organizing Epics, Users Stories, and Tasks and Bugs</h2><p>When populating the kanban board, work is organized under Epics, User Stories, Tasks, and Bugs.  Generally, the work in the Kanban board is a set of living documents, which frequently change.  Epics describe broad features which include many Tasks, User Stories, and Bugs underneath them.  An appropriate Epic may be named after a section of the application, or a specific domain of functionality.  User Stories describe tasks the user wants to accomplish with the system.  This allows for full coverage of all business cases which are presented during discovery.  As action items come up that are not specifically covered by a full use case requiring a User Story, Tasks are created which specify the work being done.  Finally, as issues are moved through a review process Bugs are filed which get worked on to resolve the functionality of the initial issue.</p><h2 id="AgileProjectPlan-TestingandQualityAssurance">Testing and Quality Assurance</h2><p>Often Customers opt to use a service which takes screenshots of a set of pages on the website and compares them against former captures of the website to observe changes.  This is known as Visual Regression testing.  For sites which are heavy on the presentation layer of their content with minimal user customizations, it is recommended to rely on this automated process to catch glaring issues.</p><p>During a handoff phase, an issue collector may be enabled for the George Eastman Museum team to file QA issues for resolution by DropForge.</p><h2 id="AgileProjectPlan-MaintenanceandOngoingSupport">Maintenance and Ongoing Support</h2><p>A help desk is utilized for customers with ongoing maintenance and support contracts.  Issues are typically responded to in under 24 hours and resolved within the terms of the contract.  This allows for communication via email or through the help desk's customer portal.  Resolution times can be tracked and further integration with the Kanban workflow is possible.</p><h2 id="AgileProjectPlan-Releases">Releases</h2><p>Below is included tasks from the 2.0.0 Drupal 8 Release following a migration.  Further discovery will result in additional revisions to this section of the document.</p><h3 id="AgileProjectPlan-2.0.0-FirstDrupal8Release">2.0.0 - First Drupal 8 Release</h3><p><br/></p></div>
+<p><style type='text/css'>/*<![CDATA[*/
+div.rbtoc1537896051704 {padding: 0px;}
+div.rbtoc1537896051704 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1537896051704 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1537896051704'>
+<ul class='toc-indentation'>
+<li><span class='TOCOutline'>1</span> <a href='#AgileProjectPlan-WhatisanAgileProjectPlan?'>What is an Agile Project Plan?</a></li>
+<li><span class='TOCOutline'>2</span> <a href='#AgileProjectPlan-AgileProcess'>Agile Process</a></li>
+<li><span class='TOCOutline'>3</span> <a href='#AgileProjectPlan-IterationsandSprints'>Iterations and Sprints</a></li>
+<li><span class='TOCOutline'>4</span> <a href='#AgileProjectPlan-Releasecycle'>Release cycle</a></li>
+<li><span class='TOCOutline'>5</span> <a href='#AgileProjectPlan-TestingandQualityAssurance'>Testing and Quality Assurance</a></li>
+<li><span class='TOCOutline'>6</span> <a href='#AgileProjectPlan-MaintenanceandOngoingSupport'>Maintenance and Ongoing Support</a></li>
+<li><span class='TOCOutline'>7</span> <a href='#AgileProjectPlan-Releases'>Releases</a>
+<ul class='toc-indentation'>
+<li><span class='TOCOutline'>7.1</span> <a href='#AgileProjectPlan-Epics'>Epics</a></li>
+<li><span class='TOCOutline'>7.2</span> <a href='#AgileProjectPlan-UserStories'>User Stories</a></li>
+</ul>
+</li>
+</ul>
+</div></p></div>
+</div>
+</div>
+<div class="columnLayout single" data-layout="single">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<h2 id="AgileProjectPlan-WhatisanAgileProjectPlan?">What is an Agile Project Plan?</h2><p>At DropForge we craft our project plans in Confluence using processes combined with Epics, Stories, Issues, and Bugs (most of which are contained within Jira) for project management purposes.  Our project plans are more than just timelines and deliverables, they consist of additional metadata that enables our team to operate efficiently and our customers to have greater insight into project status.</p><div class="confluence-information-macro confluence-information-macro-information"><p class="title">Anticipate Changes to This Document</p><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body">This document contains dynamic components, widgets, and reports.  It is considered &quot;living&quot; and will continue to be revised throughout the project lifecycle.</div></div><h2 id="AgileProjectPlan-AgileProcess">Agile Process</h2><p>Our hybrid agile process entails collecting tasks and organizing work estimates in a standardized workflow.  This approach utilizes concepts from both traditional Kanban and Scrum methodologies, enhancing key performance indicators (KPIs) such as time-to-market, total-cost-of-ownership, development iteration cycle.  Our processes enable developers to increase quality and efficiency, provide project managers with much greater insight into project status, and promote effective customer budget management.  As a developer becomes available to work on a new area of the project, they choose a story or task from a queue to work on.  All of the tasks are organized on a Kanban board which shows columns for statuses of work such as<em> work in progress,</em> <em>needs review</em> and <em>done</em>.  The developer must focus on a few issues through their completion before moving to a new task.  This crucial Kanban constraint is known as &quot;Limiting work in progress&quot; and helps to decrease developer ramp-up times and mitigate technical debt.  The DropForge agile process is unique in its use of a Kanban-based pull system, and Scrum originated timeboxing resulting in more flexible development iterations.  These iterations can be as short as a few days or as long as a few months.  All development is delivered incrementally as initial prototypes (MVPs) and then are refined with each iteration of development.</p><h2 id="AgileProjectPlan-IterationsandSprints">Iterations and Sprints</h2><p>A set of obtainable story points will be selected for development at the start of a sprint.  The sprint will consist of processing each subset of the backlog until all tasks are done.  An iteration is considered a revisitation of the features in an additional sprint where bugs and other tasks are identified to refactor an earlier sprint's functionality.</p></div>
+</div>
+</div>
+<div class="columnLayout two-equal" data-layout="two-equal">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<h2 id="AgileProjectPlan-Releasecycle">Release cycle</h2><p>Initially, several sprints are performed and at a point deemed acceptable by the development team.  At this time an early beta is staged to a shared development environment.  This beta version of the software is updated on a continuous basis as the product is developed.  Releases will be made on a regular basis to a Development environment or Standalone Feature Multi-dev environment and will be merged throughout the environments.  A typical scenario consists of the following:</p><ol><li>Feature -&gt; Dev</li><li>Dev -&gt; Test</li><li>Test -&gt; Live</li></ol></div>
+</div>
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<p><br/></p><blockquote><p>Prior to official launch and DNS cutover we typically only leverage Feature environments, along with Development and Test environments.  Test environments are used by both customers and us for review of release candidates.</p><p><em>- Andrew Rosborough, VP of Engineering, DropForge Labs</em></p></blockquote></div>
+</div>
+</div>
+<div class="columnLayout single" data-layout="single">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<p><span style="color: rgb(51,51,51);font-size: 20.0px;">Organizing Epics, Users Stories, and Tasks and Bugs</span></p><p>When populating the kanban board, work is organized under Epics, User Stories, Tasks, and Bugs.  Generally, the work in the Kanban board is a set of living documents, which frequently change.  Epics describe broad features which include many Tasks, User Stories, and Bugs underneath them.  An appropriate Epic may be named after a section of the application, or a specific domain of functionality.  User Stories describe tasks the user wants to accomplish with the system.  This allows for full coverage of all business cases which are presented during discovery.  As action items come up that are not specifically covered by a full use case requiring a User Story, Tasks are created which specify the work being done.  Finally, as issues are moved through a review process Bugs are filed which get worked on to resolve the functionality of the initial issue.</p><h2 id="AgileProjectPlan-TestingandQualityAssurance">Testing and Quality Assurance</h2><p>Often Customers opt to use a service which takes screenshots of a set of pages on the website and compares them against former captures of the website to observe changes.  This is known as Visual Regression testing.  For sites which are heavy on the presentation layer of their content with minimal user customizations, it is recommended to rely on this automated process to catch glaring issues.</p><p>During a handoff phase, an issue collector may be enabled for the George Eastman Museum team to file QA issues for resolution by DropForge.</p><h2 id="AgileProjectPlan-MaintenanceandOngoingSupport">Maintenance and Ongoing Support</h2><p>A help desk is utilized for customers with ongoing maintenance and support contracts.  Issues are typically responded to in under 24 hours and resolved within the terms of the contract.  This allows for communication via email or through the help desk's customer portal.  Key metrics are tracked and integrated into the Agile process.</p><h2 id="AgileProjectPlan-Releases">Releases</h2><p>Below is included tasks from the 2.0.0 Drupal 8 Release following a migration.  We anticipate additional revisions to this section of the document.</p><p>2.0.0 - First Drupal 8 Release</p><p><br/></p></div>
 </div>
 </div>
 <div class="columnLayout single" data-layout="single">
@@ -78,13 +120,13 @@
 
 
 
-<div id="refresh-module-743616523" class="confluence-jim-macro refresh-module-id jira-table" >
+<div id="refresh-module-1412516013" class="confluence-jim-macro refresh-module-id jira-table" >
     <p>
        
                 
         
                 
-        <div id="jira-issues-743616523" style="width: 100%;  overflow: auto;" class="jira-issues">
+        <div id="jira-issues-1412516013" style="width: 100%;  overflow: auto;" class="jira-issues">
             <table class="aui" >
                 <tbody>
                 <tr></tr>                 <tr>
@@ -503,13 +545,13 @@
 
 
 
-<div id="refresh-module-427359991" class="confluence-jim-macro refresh-module-id jira-table" >
+<div id="refresh-module-1647520754" class="confluence-jim-macro refresh-module-id jira-table" >
     <p>
        
                 
         
                 
-        <div id="jira-issues-427359991" style="width: 100%;  overflow: auto;" class="jira-issues">
+        <div id="jira-issues-1647520754" style="width: 100%;  overflow: auto;" class="jira-issues">
             <table class="aui" >
                 <tbody>
                 <tr></tr>                 <tr>
@@ -1106,7 +1148,7 @@
                                                                             Aug 14, 2018 11:08
                                                                     </td>
                                                                     <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
-                                                                            Sep 24, 2018 23:29
+                                                                            Sep 25, 2018 12:53
                                                                     </td>
                                                                     <td nowrap="true" class="jira-macro-table-underline-pdfexport" >
                                                                             <img src="https://dropforge.atlassian.net/images/icons/priorities/medium.svg" alt="Normal" class="icon" />
@@ -1731,7 +1773,7 @@
                 </div>             </div> 
             <div id="footer" role="contentinfo">
                 <section class="footer-body">
-                    <p>Document generated by Confluence on Sep 25, 2018 09:18</p>
+                    <p>Document generated by Confluence on Sep 25, 2018 13:20</p>
                     <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
                 </section>
             </div>
