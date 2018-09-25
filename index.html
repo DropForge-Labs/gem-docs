@@ -1,99 +1,117 @@
-
-
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>GEM (George Eastman Museum)</title>
-        <link rel="stylesheet" href="styles/site.css" type="text/css" />
-        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    </head>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
 
-    <body class="theme-default aui-theme-default">
-        <div id="page">
-            <div id="main" class="aui-page-panel">
-                <div id="main-header">
-                    <h1 id="title-heading" class="pagetitle">
-                        <span id="title-text">Space Details:</span>
-                    </h1>
-                </div>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-                <div id="content">
-                    <div id="main-content" class="pageSection">
-                    <table class="confluenceTable">
-                        <tr>
-                            <th class="confluenceTh">Key</th>
-                            <td class="confluenceTd">GEM</td>
-                        </tr>
-                        <tr>
-                            <th class="confluenceTh">Name</th>
-                            <td class="confluenceTd">George Eastman Museum</td>
-                        </tr>
-                        <tr>
-                            <th class="confluenceTh">Description</th>
-                            <td class="confluenceTd"></td>
-                        </tr>
-                        <tr>
-                            <th class="confluenceTh">Created by</th>
-                            <td class="confluenceTd">asantiago (Jul 20, 2018)</td>
-                        </tr>
-                    </table>
-                    </div>
-                    <br/>
-                    <br/>
+</head>
 
-                    <div class="pageSection">
-                        <div class="pageSectionHeader">
-                            <h2 class="pageSectionTitle">Available Pages:</h2>
-                        </div>
-                            <ul>
-                        <li>
-                <a href="George-Eastman-Museum_686882883.html">George Eastman Museum</a>
+<style>
+body {
 
-         <img src="images/icons/contenttypes/home_page_16.png" height="16" width="16" border="0" align="absmiddle"/>                     <ul>
-                    <li>
-                <a href="Product-requirements_686882889.html">Product requirements</a>
+	background-image: url('grunge_patterns.jpg');
+	background-attachment: fixed;
+	color: #333;
+}
+.box {
+	border-radius: 3px;
+	background: rgba(101, 101, 101, 0.7); margin: auto; padding: 12px;
+}
+.lightbox {
+	zoom: 1.5;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(10, 10, 10, 0.8);
+	text-align: center;
+	margin: auto;
 
-                            <ul>
-                    <li>
-                <a href="Agile-Project-Plan_723222925.html">Agile Project Plan</a>
+}
+div.horizontal {
+	display: flex;
+	justify-content: center;
+	height: 100%;
+}
+div.vertical {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+}
+::-webkit-input-placeholder {
+   color: #955;
+   text-align: center;
+}
+::-moz-placeholder {
+   color: #955;
+   text-align: center;
+}
+:-ms-input-placeholder {
+   color: #955;
+   text-align: center;
+}
+</style>
 
-                    </li>
-            </ul>
-                    <ul>
-                    <li>
-                <a href="Base-Line-Audit-of-Existing-Drupal-7-Site_723124584.html">Base Line Audit of Existing Drupal 7 Site</a>
+<body>
 
-                    </li>
-            </ul>
-                    <ul>
-                    <li>
-                <a href="Drupal-8-Specification_716439553.html">Drupal 8 Specification</a>
+	<div id="loginbox" class="lightbox" >
+		<div class="horizontal">
+			<div class="vertical">
+				<div class="box">
+					<input style="margin: 16px; text-align: center;" id="password" type="password" placeholder="password" /> <br />
+					<button id="loginbutton" type="button">Enter</button>
+					<p id="wrongPassword" style="display: none">wrong password</p>
+				</div>
+			</div>
+		</div>
+	</div>
 
-                    </li>
-            </ul>
-                    <ul>
-                    <li>
-                <a href="Hosting%2C-Performance%2C-and-DevOps-Strategies_720273432.html">Hosting, Performance, and DevOps Strategies</a>
 
-                    </li>
-            </ul>
-                    <ul>
-                    <li>
-                <a href="723353905.html">User Interface / User Experience Design</a>
 
-                    </li>
-            </ul>
-            </li>
-            </ul>
-            </li>
-            </ul>
-                    </div>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 
-                </div>             </div>
-            <div id="footer" role="contentinfo">
-                <section class="footer-body">
-                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
-                </section>
-            </div>
-        </div>     </body>
+
+	 <script type="text/javascript" src="https://cdn.rawgit.com/chrisveness/crypto/master/sha1.js"></script>
+
+	<script type="text/javascript">
+	"use strict";
+	function loadPage(pwd) {
+
+		var hash= pwd;
+		hash= Sha1.hash(pwd);
+		var url= hash + "/index.html";
+
+		$.ajax({
+			url : url,
+			dataType : "html",
+			success : function(data) {
+				window.location= url;
+			},
+			error : function(xhr, ajaxOptions, thrownError) {
+
+				parent.location.hash= hash;
+				//$("#wrongPassword").show();
+				$("#password").attr("placeholder","wrong password");
+				$("#password").val("");
+			}
+		});
+	}
+
+	$("#loginbutton").on("click", function() {
+		loadPage($("#password").val());
+	});
+	$("#password").keypress(function(e) {
+		if (e.which == 13) {
+
+			loadPage($("#password").val());
+		}
+	});
+	$("#password").focus();
+
+	</script>
+
+</body>
 </html>
