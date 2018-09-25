@@ -152,6 +152,12 @@ list-style-type:decimal;
         background-size: cover;
       }
     }
+    li li {
+      &:before {
+        top: 50%;
+        margin-top: -.75rem;
+      }
+    }
     table & {
       padding-left: 3rem;
       li {

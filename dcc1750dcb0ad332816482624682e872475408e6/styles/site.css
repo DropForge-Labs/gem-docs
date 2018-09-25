@@ -94,6 +94,9 @@ a, #default-labels-header a.add {
       width: 18px;
       background-image: url("https://www.dropforgelabs.com/sites/default/files/bullets.png");
       background-size: cover; }
+  .wiki-content ul li li:before {
+    top: 50%;
+    margin-top: -.75rem; }
   table .wiki-content ul {
     padding-left: 3rem; }
     table .wiki-content ul li {
