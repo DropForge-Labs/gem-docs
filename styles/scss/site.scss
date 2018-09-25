@@ -1102,6 +1102,19 @@ table, table.confluenceTable {
     color: $table-dark-color;
     font-size: 14px;
     padding: .75rem;
+    vertical-align: top;
+    p {
+      color: $table-dark-color;
+      font-size: 14px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    ul, li {
+      font-size: 14px;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-left: 0;
+    }
   }
   th, thead th {
     vertical-align: bottom;
@@ -1289,7 +1302,7 @@ table.attachments a
         width: auto!important;
         margin: 1em 0em;
         td, td.confluenceTD {
-          vertical-align: top;
+          vertical-align: top
         }
       }
       blockquote {
