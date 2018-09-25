@@ -836,7 +836,7 @@ table, table.confluenceTable {
     color: #555;
     font-size: 14px;
     padding: .75rem; }
-  table thead th, table.confluenceTable thead th {
+  table th, table thead th, table.confluenceTable th, table.confluenceTable thead th {
     vertical-align: bottom;
     border-top: 1px solid #dee2e6;
     border-bottom: 2px solid #dee2e6;
@@ -964,25 +964,32 @@ table.attachments a {
       color: #02b3da; }
     .columnLayout.two-equal blockquote:before {
       display: none; }
-  .columnLayout.two-left-sidebar .cell, .columnLayout.two-right-sidebar .cell {
+  .columnLayout.two-left-sidebar .cell, .columnLayout.two-right-sidebar .cell, .columnLayout.three-with-sidebars .cell {
     flex-grow: 1;
     padding: 0 1rem; }
-  .columnLayout.two-left-sidebar .aside, .columnLayout.two-right-sidebar .aside {
+  .columnLayout.two-left-sidebar .sidebars, .columnLayout.two-right-sidebar .sidebars, .columnLayout.three-with-sidebars .sidebars {
+    min-width: 25%;
+    max-width: 30%; }
+  .columnLayout.two-left-sidebar .aside, .columnLayout.two-right-sidebar .aside, .columnLayout.three-with-sidebars .aside {
     max-width: 40%;
     min-width: 30%;
     flex-shrink: 1; }
-    .columnLayout.two-left-sidebar .aside table, .columnLayout.two-left-sidebar .aside table.confluenceTable, .columnLayout.two-right-sidebar .aside table, .columnLayout.two-right-sidebar .aside table.confluenceTable {
+    .columnLayout.two-left-sidebar .aside table, .columnLayout.two-left-sidebar .aside table.confluenceTable, .columnLayout.two-right-sidebar .aside table, .columnLayout.two-right-sidebar .aside table.confluenceTable, .columnLayout.three-with-sidebars .aside table, .columnLayout.three-with-sidebars .aside table.confluenceTable {
       width: auto !important;
       margin: 1em 0em; }
-  .columnLayout.two-left-sidebar table, .columnLayout.two-left-sidebar table.confluenceTable, .columnLayout.two-right-sidebar table, .columnLayout.two-right-sidebar table.confluenceTable {
+  .columnLayout.two-left-sidebar table, .columnLayout.two-left-sidebar table.confluenceTable, .columnLayout.two-right-sidebar table, .columnLayout.two-right-sidebar table.confluenceTable, .columnLayout.three-with-sidebars table, .columnLayout.three-with-sidebars table.confluenceTable {
     width: auto !important;
     margin: 1em 0em; }
-    .columnLayout.two-left-sidebar table td, .columnLayout.two-left-sidebar table td.confluenceTD, .columnLayout.two-left-sidebar table.confluenceTable td, .columnLayout.two-left-sidebar table.confluenceTable td.confluenceTD, .columnLayout.two-right-sidebar table td, .columnLayout.two-right-sidebar table td.confluenceTD, .columnLayout.two-right-sidebar table.confluenceTable td, .columnLayout.two-right-sidebar table.confluenceTable td.confluenceTD {
+    .columnLayout.two-left-sidebar table td, .columnLayout.two-left-sidebar table td.confluenceTD, .columnLayout.two-left-sidebar table.confluenceTable td, .columnLayout.two-left-sidebar table.confluenceTable td.confluenceTD, .columnLayout.two-right-sidebar table td, .columnLayout.two-right-sidebar table td.confluenceTD, .columnLayout.two-right-sidebar table.confluenceTable td, .columnLayout.two-right-sidebar table.confluenceTable td.confluenceTD, .columnLayout.three-with-sidebars table td, .columnLayout.three-with-sidebars table td.confluenceTD, .columnLayout.three-with-sidebars table.confluenceTable td, .columnLayout.three-with-sidebars table.confluenceTable td.confluenceTD {
       vertical-align: top; }
-  .columnLayout.two-left-sidebar blockquote, .columnLayout.two-right-sidebar blockquote {
+  .columnLayout.two-left-sidebar blockquote, .columnLayout.two-right-sidebar blockquote, .columnLayout.three-with-sidebars blockquote {
     font-size: 1.2rem;
     background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
     background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
     margin: 0; }
-    .columnLayout.two-left-sidebar blockquote:before, .columnLayout.two-right-sidebar blockquote:before {
+    .columnLayout.two-left-sidebar blockquote:before, .columnLayout.two-right-sidebar blockquote:before, .columnLayout.three-with-sidebars blockquote:before {
       display: none; }
+
+.confluence-jim-macro td img {
+  max-width: 2em;
+  height: auto; }

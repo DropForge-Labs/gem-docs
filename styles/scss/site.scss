@@ -1103,7 +1103,7 @@ table, table.confluenceTable {
     font-size: 14px;
     padding: .75rem;
   }
-  thead th {
+  th, thead th {
     vertical-align: bottom;
     border-top: 1px solid #dee2e6;
     border-bottom: 2px solid #dee2e6;
@@ -1267,10 +1267,14 @@ table.attachments a
         }
       }
    }
-   &.two-left-sidebar, &.two-right-sidebar {
+   &.two-left-sidebar, &.two-right-sidebar, &.three-with-sidebars {
       .cell {
         flex-grow: 1;
         padding: 0 1rem;
+      }
+      .sidebars {
+        min-width: 25%;
+        max-width: 30%;
       }
       .aside {
         max-width: 40%;
@@ -1299,4 +1303,12 @@ table.attachments a
       }
    }
 
+ }
+ .confluence-jim-macro {
+   td {
+     img {
+       max-width: 2em;
+       height: auto;
+     }
+   }
  }
