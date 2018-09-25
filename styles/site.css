@@ -1010,3 +1010,16 @@ table.attachments a {
 .confluence-jim-macro td img {
   max-width: 2em;
   height: auto; }
+
+.jira-chart-macro-wrapper {
+  text-align: center;
+  margin: 1em 0 2em; }
+  .jira-chart-macro-wrapper .info {
+    display: block;
+    margin: 0 auto;
+    font-family: 'Montserrat';
+    font-size: .8em; }
+    .jira-chart-macro-wrapper .info a {
+      display: block; }
+    .jira-chart-macro-wrapper .info span {
+      display: block; }
