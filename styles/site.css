@@ -835,7 +835,24 @@ table, table.confluenceTable {
   table.confluenceTable tr {
     color: #555;
     font-size: 14px;
-    padding: .75rem; }
+    padding: .75rem;
+    vertical-align: top; }
+    table td p,
+    table tr p, table.confluenceTable td p,
+    table.confluenceTable tr p {
+      color: #555;
+      font-size: 14px;
+      margin-top: 0;
+      margin-bottom: 0; }
+    table td ul, table td li,
+    table tr ul,
+    table tr li, table.confluenceTable td ul, table.confluenceTable td li,
+    table.confluenceTable tr ul,
+    table.confluenceTable tr li {
+      font-size: 14px;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-left: 0; }
   table thead th, table.confluenceTable thead th {
     vertical-align: bottom;
     border-top: 1px solid #dee2e6;
