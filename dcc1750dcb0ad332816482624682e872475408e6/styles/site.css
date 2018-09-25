@@ -87,8 +87,8 @@ a, #default-labels-header a.add {
       display: inline-block;
       position: absolute;
       left: -2rem;
-      top: 50%;
-      margin-top: -.75rem;
+      top: 0;
+      margin-top: .3rem;
       bottom: 0;
       height: 18px;
       width: 18px;
